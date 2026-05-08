@@ -1,0 +1,76 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+        font-family: "Open Sans", sans-serif;
+        line-height: 1.6;
+        background-color: white;
+        }
+        form {
+            width: 400px;
+            margin: 20px auto;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+
+.header{
+    background-color: grey;
+    color: #fff;
+    padding: 20px 0;
+}
+
+.menubar{
+width: 90%;
+max-width: 1200px;
+margin: auto;
+}
+
+.nav ul {
+list-style: none;
+display: flex;
+gap: 20px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img {
+    height: 40px;
+    width: auto;
+}
+
+.cajaProd{
+background-color: lightgrey;
+text-align: center;
+margin-left: 5px;
+margin-right: 5px;
+}
+
+.cajaAcerca{
+background-color: white;
+text-align: center;
+margin-left: 5px;
+margin-right: 5px;
+}
+
+.cajaContacto{
+background-color: lightgrey;
+text-align: center;
+margin-left: 5px;
+margin-right: 5px;
+}
+
+.footer{
+background-color: grey;
+text-align: center;
+margin-left: 5px;
+margin-right: 5px;
+}
