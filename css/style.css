@@ -10,24 +10,37 @@ body {
     background-color: white;
 }
 
+/*Header*/
+
 .header{
-    background-color: grey;
-    color: #fff;
-    padding: 20px 0;
+    background-color: black;
+    color: lightcoral;
+    padding: 20px;
 }
 
-.menubar{
-width: 90%;
+.navbar{
+width: 100%;
 max-width: 1200px;
 margin: auto;
 }
 
-.nav ul {
-list-style: none;
+.navbar ul {
 display: flex;
+list-style: none;
 gap: 20px;
+padding: 14px 16px;
 }
 
+.navbar a{
+color: white;
+text-decoration: none;
+}
+
+.navbar a:hover{
+color: lightcoral;
+}
+
+/*Logo*/
 .logo {
     display: flex;
     align-items: center;
@@ -39,6 +52,8 @@ gap: 20px;
     width: auto;
 }
 
+/*Productos*/
+
 .hero{
 background-color: white;
 text-align: center;
@@ -46,18 +61,36 @@ margin-left: 5px;
 margin-right: 5px;
 }
 
-.cajaAcerca{
-background-color: white;
+/*Acerca*/
+
+.caja-acerca{
+display: flex;
+column-gap: 20px;
+border: 2px solid #333;
+padding: 15px;
+border-radius: 10px;
+background-color: lightgray;
 text-align: center;
 margin-left: 5px;
 margin-right: 5px;
 }
+.contenedor-columnas {
+  display: flex; /* Activa flexbox */
+  column-gap: 20px; /* Espacio entre columnas */
+}
+.columna {
+  flex: 1; /* Hace que todas las columnas tengan el mismo ancho */
+  padding: 10px;
+}
 
+/*Seccion contacto*/
 .contacto-container{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 10px;
 }
+
+/*Direccion*/
 
 .contacto-form h3,
 .contacto-dir h3,
