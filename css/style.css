@@ -8,6 +8,7 @@ body {
     font-family: "Open Sans", sans-serif;
     line-height: 1.6;
     background-color: white;
+    text-align: center;
 }
 
 /*Header*/
@@ -34,6 +35,7 @@ padding: 14px 16px;
 .navbar a{
 color: white;
 text-decoration: none;
+transition: background 0.3s;
 }
 
 .navbar a:hover{
@@ -55,16 +57,41 @@ color: lightcoral;
 
 /*Productos*/
 
-.hero{
-background-color: white;
-text-align: center;
-margin-left: 5px;
-margin-right: 5px;
+.navprod {
+    background-color: white;
+    padding: 10px;
 }
-.hero img{
-    border-radius: 8px;
+.navprod ul{
+display: flex;
+list-style: none;
+justify-content: center;
+gap: 20px;
+padding: 14px 16px;
+}
+.navprod a{
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    text-decoration: none;
+    color: black;
+    padding: 15px;
+    align-items: center;
+    transition: background 0.3s;
+    width: 100%;
+    max-width: 300px;
+    margin: auto;
+}
+
+.navprod img{
+    width: 200px;
     height: 200px;
-    width: auto;
+    border-radius: 50%;
+    margin-bottom: 5px;
+}
+
+.navprod a:hover {
+    background-color: lightgray;
+    border-radius: 5px;
 }
 
 /*Acerca*/
@@ -77,15 +104,14 @@ padding: 15px;
 border-radius: 10px;
 background-color: lightgray;
 text-align: center;
-margin-left: 5px;
-margin-right: 5px;
+margin: 5px;
 }
 .contenedor-columnas {
-  display: flex; /* Activa flexbox */
-  column-gap: 20px; /* Espacio entre columnas */
+  display: flex;
+  column-gap: 20px;
 }
 .columna {
-  flex: 1; /* Hace que todas las columnas tengan el mismo ancho */
+  flex: 1;
   padding: 10px;
 }
 
@@ -94,6 +120,7 @@ margin-right: 5px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 10px;
+    justify-content: center;
 }
 
 /*Direccion*/
