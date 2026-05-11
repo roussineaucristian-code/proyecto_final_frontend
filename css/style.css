@@ -96,23 +96,18 @@ padding: 14px 16px;
 
 /*Acerca*/
 
-.caja-acerca{
-display: flex;
-column-gap: 20px;
-border: 2px solid #333;
-padding: 15px;
-border-radius: 10px;
-background-color: lightgray;
-text-align: center;
-margin: 5px;
-}
 .contenedor-columnas {
-  display: flex;
-  column-gap: 20px;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 20px;
 }
+
 .columna {
-  flex: 1;
-  padding: 10px;
+    flex: 1;
+    background-color: #f4f4f4;
+    padding: 15px;
+    border: 1px solid #ccc;
 }
 
 /*Seccion contacto*/
