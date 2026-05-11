@@ -178,3 +178,36 @@ background-color: grey;
 text-align: center;
 margin-left: 5px auto;
 }
+
+.footer-columnas {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.footer-columna {
+    flex: 1;
+    background-color: gray;
+    padding: 15px;
+}
+
+.footer-box{
+width: 100%;
+max-width: 1200px;
+margin: auto;
+}
+
+.footer-box ul {
+list-style: none;
+gap: 20px;
+}
+
+.footer-box a{
+color: white;
+text-decoration: none;
+transition: background 0.3s;
+}
+
+.footer-box a:hover{
+color: black;
+}
