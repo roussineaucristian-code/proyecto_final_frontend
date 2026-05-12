@@ -8,6 +8,10 @@ body {
     font-family: "Open Sans", sans-serif;
     line-height: 1.6;
     background-color: white;
+    
+}
+h2,
+h3{
     text-align: center;
 }
 
@@ -20,26 +24,26 @@ body {
 }
 
 .navbar{
-width: 100%;
-max-width: 1200px;
-margin: auto;
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
 }
 
 .navbar ul {
-display: flex;
-list-style: none;
-gap: 20px;
-padding: 14px 16px;
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    padding: 14px 16px;
 }
 
 .navbar a{
-color: white;
-text-decoration: none;
-transition: background 0.3s;
+    color: white;
+    text-decoration: none;
+    transition: background 0.3s;
 }
 
 .navbar a:hover{
-color: lightcoral;
+    color: lightcoral;
 }
 
 /*Logo*/
@@ -62,11 +66,11 @@ color: lightcoral;
     padding: 10px;
 }
 .navprod ul{
-display: flex;
-list-style: none;
-justify-content: center;
-gap: 20px;
-padding: 14px 16px;
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    gap: 20px;
+    padding: 14px 16px;
 }
 .navprod a{
     display: flex;
@@ -86,7 +90,6 @@ padding: 14px 16px;
     width: 200px;
     height: 200px;
     border-radius: 50%;
-    margin-bottom: 5px;
 }
 
 .navprod a:hover {
@@ -109,12 +112,18 @@ padding: 14px 16px;
     border: 1px solid #ccc;
 }
 
+.columna img{
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    padding: 5px;
+}
+
 /*Seccion contacto*/
 .contacto-container{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 10px;
-    justify-content: center;
 }
 
 /*Direccion*/
@@ -123,7 +132,6 @@ padding: 14px 16px;
 .contacto-dir h3,
 .contacto-dir p{
     display: flex;
-    align-items: center;
     margin-left: 40px;
 }
 
@@ -165,17 +173,12 @@ padding: 14px 16px;
     width: fit-content;
 }
 
-label {
-display: inline-block;
-width: 120px;
-}
-
 /*Footer*/
 
 .footer{
-background-color: grey;
-text-align: center;
-margin-left: 5px auto;
+    background-color: grey;
+    text-align: center;
+    margin-left: 5px auto;
 }
 
 .footer-columnas {
@@ -192,22 +195,22 @@ margin-left: 5px auto;
 }
 
 .footer-box{
-width: 100%;
-max-width: 1200px;
-margin: auto;
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
 }
 
 .footer-box ul {
-list-style: none;
-gap: 20px;
+    list-style: none;
+    gap: 20px;
 }
 
 .footer-box a{
-color: white;
-text-decoration: none;
-transition: background 0.3s;
+    color: white;
+    text-decoration: none;
+    transition: background 0.3s;
 }
 
 .footer-box a:hover{
-color: black;
+    color: black;
 }
