@@ -10,8 +10,8 @@ body {
     background-color: white;
     
 }
-h2,
-h3{
+
+.subtitulo{
     text-align: center;
 }
 
@@ -103,6 +103,7 @@ h3{
     display: flex;
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
+    padding: 10px;
 }
 
 .columna {
@@ -110,6 +111,7 @@ h3{
     background-color: #f4f4f4;
     padding: 15px;
     border: 1px solid #ccc;
+    text-align: center;
 }
 
 .columna img{
