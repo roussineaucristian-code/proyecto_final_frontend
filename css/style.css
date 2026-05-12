@@ -98,9 +98,8 @@ padding: 14px 16px;
 
 .contenedor-columnas {
     display: flex;
-    justify-content: space-between;
-    gap: 20px;
-    padding: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
 }
 
 .columna {
@@ -133,7 +132,7 @@ padding: 14px 16px;
     padding: 10px;
     border-radius: 10px;
     width: 60%;
-    height: 60%;
+    height: auto;
 }
 
 /*Formulario*/
@@ -181,8 +180,9 @@ margin-left: 5px auto;
 
 .footer-columnas {
     display: flex;
-    justify-content: space-between;
-    padding: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    
 }
 
 .footer-columna {
