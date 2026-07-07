@@ -1,18 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bulonera</title>
+
+    <!-- Vinculación de la hoja de estilos CSS externa -->
     <link href="css/style.css" rel="stylesheet">
+
+    <!-- Conexión y carga de fuentes tipográficas desde Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+    
+    <!-- Inyección de archivos JavaScript: Lógica interna del carrito y librería externa SweetAlert2 para alertas -->
+    <script src="js/carrito.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 
 <body>
 
-    <!--Encabezado-->
+    <!-- Encabezado principal del sitio (Navbar de navegación) -->
     <header class="header" id="inicio">
         <nav class="navbar">
             <h1 class="logo">
@@ -21,7 +29,7 @@
             </h1>
             <ul>
                 <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#productos">Productos</a></li>
+                <li><a href="#catalogo">Catálogo</a></li>
                 <li><a href="#acerca">Acerca de nosotros</a></li>
                 <li><a href="#contacto">Contacto</a></li>
             </ul>
@@ -30,18 +38,18 @@
 
     <main>
 
-        <!--Productos-->
-        <section id="productos">
-            <h2 class="subtitulo">Productos</h2>
+        <!-- Sección 1: Catálogo de categorías principales -->
+        <section id="catalogo">
+            <h2 class="subtitulo">Catálogo</h2>
             <nav class="navprod">
-            <ul>
-                <li><a href="#"><img src="img/herramientas.jpg" alt="Herramientas">Herramientas</a></li>
-                <li><a href="#"><img src="img/tornillos_tuercas.jpg" alt="Buloneria">Buloneria</a></li>
-            </ul>
-        </nav>
+                <ul>
+                    <li><a href="#"><img src="img/herramientas.jpg" alt="Herramientas">Herramientas</a></li>
+                    <li><a href="#"><img src="img/tornillos_tuercas.jpg" alt="Buloneria">Bulonería</a></li>
+                </ul>
+            </nav>
         </section>
 
-        <!--Acerca-->
+        <!-- Sección 2: Información corporativa de la empresa (Distribución en columnas mediante CSS) -->
         <section id="acerca">
             <h2 class="subtitulo">Acerca de nosotros</h2>    
             <div class="contenedor-columnas">
@@ -50,83 +58,120 @@
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate aspernatur reprehenderit minus vel, et aliquam sapiente doloribus ab id earum, dolorem consectetur quidem delectus voluptatum libero laudantium soluta deserunt culpa alias sunt quia debitis? Porro dignissimos ea debitis ad voluptas commodi, exercitationem maxime fugit corrupti libero quo! Soluta quas harum neque delectus tempora perspiciatis tempore voluptatibus in, mollitia incidunt distinctio quod odit suscipit, at eum, sunt praesentium ea modi repellendus deserunt? Commodi molestiae recusandae suscipit rerum laborum minima voluptatum delectus facilis. Necessitatibus cumque maiores voluptatum molestias, aperiam itaque eos at quasi facilis fugit dolorum, nulla reprehenderit numquam sed, unde assumenda?</p>
                 </div>
                 <div class="columna">
-                    
                     <p><img src="img/negocio.jpg" alt="Negocio"></p>
-                    
                 </div>
                 <div class="columna">
-                    <h3>Garantia</h3>
+                    <h3>Garantía</h3>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis ipsa veritatis culpa perspiciatis repellat eos consectetur inventore in voluptate neque illo quia, ratione, vel commodi laborum adipisci ex accusamus temporibus. Assumenda velit quasi asperiores id quam blanditiis non, illo dolor dolore dicta laboriosam, ab, eos a. Hic perferendis adipisci ratione eligendi dicta et officia delectus accusantium perspiciatis. Autem, facilis in exercitationem dolores animi ab tenetur ratione nostrum! Minima distinctio ipsum veritatis nemo enim maxime, iusto doloribus possimus nulla perspiciatis quisquam voluptas similique voluptatibus maiores voluptates ullam ut repellat praesentium, sed fuga fugit? Magnam temporibus iure ducimus nemo, velit libero nisi.</p>
                 </div>
             </div>
         </section>
-        
 
-        <!--Contacto-->
+        <!-- Sección 3: Módulo de la tienda e interfaz interactiva del Carrito de compras -->      
+        <section class="productos-section" id="carrito">
+            <h2 class="section-title">Herramientas eléctricas</h2>
+
+            <div class="tienda-container">
+                <!-- Listado donde JavaScript inyectará dinámicamente las tarjetas de productos -->
+                <div class="productos-lista">
+                    <h3>Productos disponibles</h3>
+                    <ul id="lista-productos">
+                        <!-- Los productos se cargan desde js/carrito.js -->
+                    </ul>
+                </div>
+
+                <!-- Panel lateral flotante con el estado actual de la orden de compra -->
+                <aside class="carrito-box">
+                    <h3>🛒 Tu carrito (<span id="cantidad-carrito">0</span>)</h3>
+
+                    <!-- Lista contenedora de los artículos seleccionados por el cliente -->
+                    <ul id="items-carrito">
+                        <!-- Los items del carrito se cargan desde js/carrito.js -->
+                    </ul>
+
+                    <!-- Visualizador del precio final acumulado -->
+                    <div class="carrito-total">
+                        <span>Total:</span>
+                        <strong id="total-carrito">$0</strong>
+                    </div>
+
+                    <!-- Botonera de control para vaciar la orden o proceder al módulo de pago con SweetAlert2 -->
+                    <div class="carrito-acciones">
+                        <button id="btn-vaciar" class="btn-secundario">Vaciar</button>
+                        <button id="btn-pagar" class="btn">Pagar</button>
+                    </div>
+
+                    <p class="carrito-nota">* El pago es una demostración, no se procesa ningún cobro real.</p>
+                </aside>
+            </div>
+        </section>
+
+        <!-- Sección 4: Módulo de Contacto (Formulario funcional + Ubicación geográfica) -->
         <section id="contacto">
             <h2 class="subtitulo">Contacto</h2>
-                <div class="contacto-container">
-                    <!--Formulario-->
-                    <div class="contacto-form">
+            <div class="contacto-container">
+                <!-- Formulario de envío directo por correo electrónico procesado remotamente mediante Formspree -->
+                <div class="contacto-form">
                     <h3 class="subtitulo">Escribinos</h3>
-                        <form action="https://formspree.io/f/mvzlbqge" method="POST" enctype="multipart/form-data">
-                            <input type="text" name="nombre" id="nombre" placeholder="Escriba su nombre" required maxlength="10" minlength="3">
+                    <form action="https://formspree.io/f/mvzlbqge" method="POST" enctype="multipart/form-data">
+                        <input type="text" name="nombre" id="nombre" placeholder="Escriba su nombre" required maxlength="10" minlength="3">
+                        <input type="email" name="email" id="email" placeholder="Escriba su email" required>
+                        <textarea name="mensaje" id="mensaje" placeholder="Escriba su mensaje" required maxlength="300" minlength="10"></textarea>
+                        <button type="submit">Enviar</button>
+                    </form>
+                </div>    
 
-                            <input type="email" name="email" id="email" placeholder="Escriba su email" required>
-
-                            <textarea name="mensaje" id="mensaje" placeholder="Escriba su mensaje" required maxlength="300" minlength="10"></textarea>
-
-                            <button type="submit">Enviar</button>
-
-                        </form>
-                    </div>    
-
-                    <!--Direccion-->
-                    <div class="contacto-dir">
-                        <h3 class="subtitulo">Visitanos</h3>
-                        <p>📍Direccion: 9 de Julio y Corrientes, Obelizco</p>
-                        <p>☎️Telefono: +54 11 9876-5432</p>
-                        <p>📧Email: bulon@bulon.com</p>
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.0181055853323!2d-58.38417712354501!3d-34.60370367295437!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4aa9f0a6da5edb%3A0x11bead4e234e558b!2sObelisco!5e0!3m2!1ses!2sar!4v1778180336415!5m2!1ses!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                    </div>
+                <!-- Bloque informativo con datos de atención y mapa embebido de Google Maps -->
+                <div class="contacto-dir">
+                    <h3 class="subtitulo">Visitanos</h3>
+                    <p>📍Dirección: 9 de Julio y Corrientes, Obelisco</p>
+                    <p>☎️Teléfono: +54 11 9876-5432</p>
+                    <p>📧Email: bulon@bulon.com</p>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.0181055853323!2d-58.38417712354501!3d-34.60370367295437!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4aa9f0a6da5edb%3A0x11bead4e234e558b!2sObelisco!5e0!3m2!1ses!2sar!4v1778180336415!5m2!1ses!2sar" width="600" height="450" style="border:0;" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
+            </div>
         </section>
 
     </main>
 
+    <!-- Pie de página: Contiene datos corporativos secundarios, navegación y derechos de autor -->
     <footer class="footer">
         <div class="footer-columnas">
+            <!-- Columna 1: Información de sucursal física -->
             <div class="footer-columna">
-                <h3>Direccion</h3>
-                    <p>📍Direccion: 9 de Julio y Corrientes, Obelizco</p>
-                    <p>☎️Telefono: +54 11 9876-5432</p>
-                    <p>📧Email: bulon@bulon.com</p>
+                <h3>Dirección</h3>
+                <p>📍Dirección: 9 de Julio y Corrientes, Obelisco</p>
+                <p>☎️Teléfono: +54 11 9876-5432</p>
+                <p>📧Email: bulon@bulon.com</p>
             </div>
+            <!-- Columna 2: Mapa del sitio rápido -->
             <div class="footer-columna">
                 <h3>Enlaces</h3>
                 <nav class="footer-box">
                     <ul>
                         <li><a href="#inicio">Inicio</a></li>
-                        <li><a href="#productos">Productos</a></li>
+                        <li><a href="#catalogo">Catálogo</a></li>
                         <li><a href="#acerca">Acerca de nosotros</a></li>
                         <li><a href="#contacto">Contacto</a></li>
                     </ul>
                 </nav>
             </div>
             <div class="footer-columna">
+                <!-- Columna 3: Enlaces externos a redes sociales -->
                 <h3>Redes</h3>
                 <nav class="footer-box">
                     <ul>
                         <li><a href="#">Facebook</a></li>
                         <li><a href="#">Instagram</a></li>
-                        <li><a href="#">Linkedin</a></li>
+                        <li><a href="#">LinkedIn</a></li>
                         <li><a href="#">YouTube</a></li>
                     </ul>
                 </nav>
             </div>
         </div>
-        <div>
-            <p>©Trabajo de pre-entrega Front-End. Autor: Cristian Roussineau</p>
+        <!-- Barra de copyright inferior para cierre formal del documento -->
+        <div class="footer-bottom">
+            <p>© Trabajo final FrontEnd - Cristian Roussineau - Todos los derechos reservados.</p>
         </div>
     </footer>
 
